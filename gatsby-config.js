@@ -13,5 +13,6 @@ module.exports = {
         allExtensions: true,
       },
     },
+    `gatsby-plugin-emotion`,
   ],
 }
