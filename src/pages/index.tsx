@@ -51,9 +51,6 @@ export const IndexQuery = graphql`
             date
             summary
             categories
-            thumbnail {
-              publicURL
-            }
           }
         }
       }
