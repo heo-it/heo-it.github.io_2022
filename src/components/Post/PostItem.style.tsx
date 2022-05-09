@@ -54,6 +54,4 @@ export const PostListMeta = styled.div`
   margin-top: 2rem;
 
   font-size: var(--size-300);
-  display: flex;
-  justify-content: space-between;
 `

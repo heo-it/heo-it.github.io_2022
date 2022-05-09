@@ -38,8 +38,6 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
       />
       <PostListMeta>
         <span>{date}</span>
-
-        <span>{date} mins</span>
       </PostListMeta>
     </StyledPostListItem>
   )
