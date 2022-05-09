@@ -26,7 +26,7 @@ const Header: FunctionComponent<HeaderProps> = function ({ title }) {
             <BiCategoryAlt />
           </StyledNavListItem>
 
-          <StyledNavListItem to="/tags">
+          <StyledNavListItem to="/category">
             <BiPurchaseTagAlt />
           </StyledNavListItem>
 

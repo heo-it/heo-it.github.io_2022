@@ -1,0 +1,56 @@
+import React, { FunctionComponent } from 'react'
+import { graphql } from 'gatsby'
+import Layout from 'components/Layout/Layout'
+import Description from 'components/Layout/Description'
+import {
+  StyledCategoryList,
+  StyledLink
+} from '../styles/Category.style'
+
+type GroupType = {
+  fieldValue: string
+  totalCount: number
+}
+
+type CategoryProps = {
+  data: {
+    allMarkdownRemark: {
+      group: GroupType[]
+    }
+  }
+}
+
+const Category: FunctionComponent = function ({
+  data: {
+    allMarkdownRemark: {
+      group
+    }
+  }
+}) {
+  return (
+    <Layout>
+      <Description title="category" description={`${group.length}개의 카테고리`} />
+      <StyledCategoryList>
+        {group.map(({ fieldValue, totalCount }) => (
+          <StyledLink to={`${fieldValue}`}>
+            <span>{fieldValue}</span>
+            {totalCount}
+          </StyledLink>
+        ))}
+      </StyledCategoryList>
+    </Layout>
+  )
+}
+
+export const CategoryQuery = graphql`
+  {
+    allMarkdownRemark {
+      group(field: frontmatter___categories) {
+        fieldValue
+        totalCount
+      }
+    }
+  }
+`
+
+export default Category
