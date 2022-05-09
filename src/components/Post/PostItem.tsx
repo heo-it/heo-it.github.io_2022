@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { Link } from 'gatsby'
+import CategoryList from 'components/Post/CategoryList'
 import {
   StyledPostListItem,
   PostListTitle,
@@ -8,22 +9,20 @@ import {
 } from './PostItem.style'
 
 
-type PostListProps = {
+type PostItemProps = {
+  key: string
   title: string
   date: string
   categories: string[]
   summary: string
-  thumbnail: string
-  link: string
 }
 
-const PostItem: FunctionComponent<PostListProps> = function ({
+const PostItem: FunctionComponent<PostItemProps> = function ({
+  key,
   title,
   date,
   categories,
   summary,
-  thumbnail,
-  link
 }) {
   return (
     <StyledPostListItem>
