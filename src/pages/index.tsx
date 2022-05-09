@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
-import Layout from 'components/layout'
-import { graphql } from 'gatsby';
+import Layout from 'components/Layout/Layout'
+import Description from 'components/Layout/Description'
+import { graphql } from 'gatsby'
 
 type IndexProps = {
   data: {
@@ -13,19 +14,11 @@ type IndexProps = {
   }
 }
 
-const IndexPage: FunctionComponent<IndexProps> = function({
-  data: {
-    site: {
-      siteMetadata: { title, description }
-    }
-  }
-}) {
+const IndexPage: FunctionComponent<IndexProps> = function() {
   return (
-    <>
-      <Layout title={title} description={description}>
-        <div>main</div>
-      </Layout>
-    </>
+    <Layout>
+      <Description title="blog" description={`N개의 게시글`} />
+    </Layout>
   )
 }
 
