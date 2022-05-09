@@ -26,7 +26,7 @@ const IndexPage: FunctionComponent<IndexProps> = function({
 }) {
   return (
     <Layout>
-      <Description title="blog" description={`N개의 게시글`} />
+      <Description title="blog" description={`${edges.length}개의 게시글`} />
       <PostList posts={ edges } />
     </Layout>
   )
