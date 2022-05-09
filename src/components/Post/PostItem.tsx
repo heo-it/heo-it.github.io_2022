@@ -26,7 +26,7 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
 }) {
   return (
     <StyledPostListItem>
-      {/* <Tags tags={categories} /> */}
+      <CategoryList categories={categories} />
 
       <PostListTitle>
         <Link to={title}>{title}</Link>
