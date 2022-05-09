@@ -1,18 +1,12 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
-import { PostType } from '../components/Post/PostList'
+import { PostType } from 'components/Post/PostList'
 import Layout from 'components/Layout/Layout'
 import PostList from 'components/Post/PostList'
 import Description from 'components/Layout/Description'
 
 type IndexProps = {
   data: {
-    site: {
-      siteMetadata: {
-        title: string
-        description: string
-      }
-    },
     allMarkdownRemark: {
       edges: PostType[]
     }
@@ -34,12 +28,6 @@ const IndexPage: FunctionComponent<IndexProps> = function({
 
 export const IndexQuery = graphql`
   {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] }
     ) {
