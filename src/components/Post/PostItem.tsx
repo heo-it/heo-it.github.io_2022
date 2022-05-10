@@ -11,18 +11,21 @@ import {
   PostFrontmatterType
 } from 'types/PostItem.types'
 
-const PostItem: FunctionComponent<PostFrontmatterType> = function ({
+type PostItemProps = PostFrontmatterType & { link: string }
+
+const PostItem: FunctionComponent<PostItemProps> = function ({
   title,
   date,
   categories,
   summary,
+  link
 }) {
   return (
     <StyledPostListItem>
       <CategoryList categories={categories} />
 
       <PostListTitle>
-        <Link to={title}>{title}</Link>
+        <Link to={link}>{title}</Link>
       </PostListTitle>
       <PostListExcerpt
         dangerouslySetInnerHTML={{

@@ -34,6 +34,9 @@ export const IndexQuery = graphql`
       edges {
         node {
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
             date

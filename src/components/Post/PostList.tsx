@@ -18,11 +18,9 @@ const PostList: FunctionComponent<PostListProps> = function ({
     <PostListWrapper>
       {
         posts.map(({
-          node: { id, frontmatter },
+          node: { id, fields: { slug }, frontmatter },
         }: PostListItemType) => (
-          <PostItem 
-            key={id}
-            {...frontmatter}
+          <PostItem {...frontmatter} key={id} link={slug}
           />
         ))
       }
