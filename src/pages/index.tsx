@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
-import { PostType } from 'components/Post/PostList'
+import { PostListItemType } from 'types/PostItem.types'
 import Layout from 'components/Layout/Layout'
 import PostList from 'components/Post/PostList'
 import Description from 'components/Layout/Description'
@@ -8,7 +8,7 @@ import Description from 'components/Layout/Description'
 type IndexProps = {
   data: {
     allMarkdownRemark: {
-      edges: PostType[]
+      edges: PostListItemType[]
     }
   }
 }

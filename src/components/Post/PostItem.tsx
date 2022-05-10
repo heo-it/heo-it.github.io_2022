@@ -7,18 +7,11 @@ import {
   PostListExcerpt,
   PostListMeta
 } from './PostItem.style'
+import {
+  PostFrontmatterType
+} from 'types/PostItem.types'
 
-
-type PostItemProps = {
-  key: string
-  title: string
-  date: string
-  categories: string[]
-  summary: string
-}
-
-const PostItem: FunctionComponent<PostItemProps> = function ({
-  key,
+const PostItem: FunctionComponent<PostFrontmatterType> = function ({
   title,
   date,
   categories,

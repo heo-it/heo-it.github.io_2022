@@ -9,7 +9,8 @@
     "paths": {
       "components/*": ["./components/*"],
       "utils/*": ["./utils/*"],
-      "hooks/*": ["./hooks/*"]
+      "hooks/*": ["./hooks/*"],
+      "types/*": ["./types/*"]
     },                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     "resolveJsonModule": true,                        /* Enable importing .json files */
     /* JavaScript Support */

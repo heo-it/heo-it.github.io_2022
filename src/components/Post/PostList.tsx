@@ -3,21 +3,12 @@ import PostItem from './PostItem'
 import {
   PostListWrapper
 } from './PostList.style'
-
-export type PostType = {
-  node: {
-    id: string,
-    frontmatter: {
-      title: string
-      date: string
-      summary: string
-      categories: string[]
-    }
-  }
-}
+import {
+  PostListItemType
+} from 'types/PostItem.types'
 
 type PostListProps = {
-  posts: PostType[]
+  posts: PostListItemType[]
 }
 
 const PostList: FunctionComponent<PostListProps> = function ({
@@ -28,7 +19,7 @@ const PostList: FunctionComponent<PostListProps> = function ({
       {
         posts.map(({
           node: { id, frontmatter },
-        }: PostType) => (
+        }: PostListItemType) => (
           <PostItem 
             key={id}
             {...frontmatter}
