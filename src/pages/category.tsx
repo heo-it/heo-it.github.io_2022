@@ -20,7 +20,7 @@ type CategoryProps = {
   }
 }
 
-const Category: FunctionComponent = function ({
+const Category: FunctionComponent<CategoryProps> = function ({
   data: {
     allMarkdownRemark: {
       group
