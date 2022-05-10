@@ -49,4 +49,4 @@ export const IndexQuery = graphql`
   }
 `;
 
-export default IndexPage;
+export default IndexPage
