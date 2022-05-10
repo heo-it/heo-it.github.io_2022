@@ -68,7 +68,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // post Template 
   const PostTemplateComponent = path.resolve(
     __dirname,
-    'src/template/post_template.tsx',
+    'src/templates/post_template.tsx',
   );
 
   const generatePostPage = ({
@@ -90,7 +90,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // category Template
   const CategoryTemplateComponent = path.resolve(
     __dirname,
-    'src/template/category_template.tsx',
+    'src/templates/category_template.tsx',
   );
 
   const categoryListPage = ({ fieldValue, totalCount }) => {
