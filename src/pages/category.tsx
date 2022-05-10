@@ -5,7 +5,7 @@ import Description from 'components/Layout/Description'
 import {
   StyledCategoryList,
   StyledLink
-} from '../styles/Category.style'
+} from 'styles/Category.style'
 
 type GroupType = {
   fieldValue: string
