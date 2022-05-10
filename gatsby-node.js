@@ -65,6 +65,28 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
+  // post Template 
+  const PostTemplateComponent = path.resolve(
+    __dirname,
+    'src/template/post_template.tsx',
+  );
+
+  const generatePostPage = ({
+    node: {
+      fields: { slug }
+    }
+  }) => {
+    const pageOptions = {
+      path: slug,
+      component: PostTemplateComponent,
+      context: { slug }
+    };
+
+    createPage(pageOptions);
+  };
+
+  queryAllMarkdownData.data.allMarkdownRemark.edges.forEach(generatePostPage);
+
   // category Template
   const CategoryTemplateComponent = path.resolve(
     __dirname,
