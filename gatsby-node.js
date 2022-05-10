@@ -27,3 +27,62 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({ node, name: 'slug', value: slug });
   }
 }
+
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions;
+
+  // Markdown 페이지 전체 쿼리
+  const queryAllMarkdownData = await graphql(
+    `
+      {
+        allMarkdownRemark (
+          sort: {
+            order: DESC
+            fields: [frontmatter___date, frontmatter___title]
+          }
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+            }
+          }
+        }
+        categoryGroup: allMarkdownRemark {
+          group(field: frontmatter___categories) {
+            fieldValue
+            totalCount
+          }
+        }
+      }
+    `
+  );
+
+  // Error
+  if (queryAllMarkdownData.errors) {
+    reporter.panicOnBuild(`Error while running query`);
+    return
+  }
+
+  // category Template
+  const CategoryTemplateComponent = path.resolve(
+    __dirname,
+    'src/template/category_template.tsx',
+  );
+
+  const categoryListPage = ({ fieldValue, totalCount }) => {
+    const CategoryOptions = {
+      path: `/category/${fieldValue}/`,
+      component: CategoryTemplateComponent,
+      context: { 
+        fieldValue: fieldValue, 
+        totalCount: totalCount 
+      }
+    };
+
+    createPage(CategoryOptions);
+  };
+
+  queryAllMarkdownData.data.categoryGroup.group.forEach(categoryListPage);
+}

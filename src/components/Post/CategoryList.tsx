@@ -15,7 +15,7 @@ const CategoryList: FunctionComponent<CategoryListProps> = function ({
         categories.map((category: string) => {
           return (
             <Category key={category}>
-              <Link to={`/categories/`}>{category}</Link>
+              <Link to={`/category/${category}`}>{category}</Link>
             </Category>
           );
         })
