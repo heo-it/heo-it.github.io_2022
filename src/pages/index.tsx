@@ -3,24 +3,33 @@ import { graphql } from 'gatsby'
 import { PostListItemType } from 'types/PostItem.types'
 import Layout from 'components/Layout/Layout'
 import PostList from 'components/Post/PostList'
-import Description from 'components/Layout/Description'
+import Introduction from 'components/Profile/Introduction'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 type IndexProps = {
   data: {
     allMarkdownRemark: {
       edges: PostListItemType[]
     }
+    file: {
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
+      }
+    }
   }
 }
 
 const IndexPage: FunctionComponent<IndexProps> = function({
   data: {
-    allMarkdownRemark: { edges }
+    allMarkdownRemark: { edges },
+    file: {
+      childImageSharp: { gatsbyImageData }
+    }
   }
 }) {
   return (
     <Layout>
-      <Description title="blog" description={`${edges.length}개의 게시글`} />
+      <Introduction profileImage={ gatsbyImageData } />
       <PostList posts={ edges } />
     </Layout>
   )
@@ -44,6 +53,11 @@ export const IndexQuery = graphql`
             categories
           }
         }
+      }
+    }
+    file(name: { eq: "profile-image" }) {
+      childImageSharp {
+        gatsbyImageData(width: 120, height: 120)
       }
     }
   }
