@@ -1,12 +1,6 @@
 import { css } from '@emotion/react';
 
 const GlobalStyle = css`
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
   body,
   h1,
   h2,
@@ -24,11 +18,6 @@ const GlobalStyle = css`
   ol[role='list'] {
     list-style: none;
   }
-
-  html:focus-within {
-    scroll-behavior: smooth;
-  }
-
   html {
     height: -webkit-fill-available;
   }
@@ -142,7 +131,7 @@ const GlobalStyle = css`
   }
 
   p, li {
-      max-width: none;
+    max-width: none;
   }
 `
 
