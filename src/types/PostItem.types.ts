@@ -11,6 +11,7 @@ export type PostListItemType = {
     fields: {
       slug: string
     }
+    html: string
     frontmatter: PostFrontmatterType
   }
 }
