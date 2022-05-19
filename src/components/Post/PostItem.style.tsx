@@ -20,7 +20,7 @@ export const StyledPostListItem = styled.li`
       margin-top: var(--size-600);
     }
   }
-`;
+`
 
 export const PostListTitle = styled.h2`
   line-height: 1.2;
@@ -48,7 +48,7 @@ export const PostListTitle = styled.h2`
 export const PostListExcerpt = styled.p`
   margin-top: auto;
   font-size: var(--size-400);
-`;
+`
 
 export const PostListMeta = styled.div`
   margin-top: 2rem;
