@@ -48,7 +48,7 @@ const GlobalStyle = css`
 
   @media (prefers-reduced-motion: reduce) {
     html:focus-within {
-    scroll-behavior: auto;
+      scroll-behavior: auto;
     }
 
     *,
@@ -71,7 +71,7 @@ const GlobalStyle = css`
   }
 
   body::-webkit-scrollbar-track {
-      background: transparent;
+    background: transparent;
   }
 
   :root {
