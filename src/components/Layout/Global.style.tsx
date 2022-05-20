@@ -66,10 +66,6 @@ const GlobalStyle = css`
     overflow-x:hidden;
   }
 
-  body::-webkit-scrollbar {
-      width: 10px;
-  }
-
   body::-webkit-scrollbar-thumb {
     background-color: rgba(55, 41, 44, .4);
   }
