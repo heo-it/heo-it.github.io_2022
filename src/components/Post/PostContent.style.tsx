@@ -127,7 +127,7 @@ export const Content = styled.div`
 
   code {
     margin: 0px 0.2rem 0px 0px;
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 0.3rem;
     border-radius: 0.3rem;
     background: rgb(230, 230, 230);
     font-size: 95%;
