@@ -15,15 +15,10 @@ export const IntroduceWrapper = styled.div`
   cursor: default;
 `
 
-export const Name = styled.p`
-  font-size: 2rem;
-  font-weight: 600;
-`
-
 export const Introduce = styled.p`
-  font-size: 0.9rem;
+  font-size: var(--size-350);
   line-height: 110%;
-  margin: 1rem 0 1rem;
+  margin: var(--size-400) 0 var(--size-400);
 `
 
 export const Contact = styled.p`

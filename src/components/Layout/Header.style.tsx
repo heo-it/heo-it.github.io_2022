@@ -7,7 +7,7 @@ export const StyledHeader = styled.header`
   width: 100%;
   background: linear-gradient(to left, #6868ac, #e9435e, #ecc371);
   animation: gradient 20s ease infinite;
-  padding-top: var(--size-300);
+  padding-top: 0.6rem;
 `;
 
 export const HeaderWrapper = styled(Container)`
@@ -43,7 +43,7 @@ export const StyledNavListItem = styled(Link)`
   border-radius: 2rem;
   height: 3.5rem;
   width: 3rem;
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 var(--size-400);
 
   svg {
     width: 1.5rem;

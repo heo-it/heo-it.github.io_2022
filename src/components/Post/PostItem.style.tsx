@@ -24,8 +24,8 @@ export const StyledPostListItem = styled.li`
 
 export const PostListTitle = styled.h2`
   line-height: 1.2;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: var(--size-400);
+  margin-bottom: var(--size-400);
   text-transform: capitalize;
   font-size: var(--size-600);
   font-weight: 700;
@@ -47,7 +47,7 @@ export const PostListTitle = styled.h2`
 
 export const PostListExcerpt = styled.p`
   margin-top: auto;
-  font-size: var(--size-400);
+  font-size: var(--size-350);
 `
 
 export const PostListMeta = styled.div`

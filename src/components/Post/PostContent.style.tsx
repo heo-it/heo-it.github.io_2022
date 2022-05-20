@@ -111,7 +111,7 @@ export const Content = styled.div`
   img {
     width: 100%;
     border-style: none;
-    border-radius: 1rem;
+    border-radius: var(--size-400);
   }
 
   em {
@@ -126,7 +126,7 @@ export const Content = styled.div`
   table {
     display: table;
     border-collapse: collapse;
-    margin: 1rem 0;
+    margin: var(--size-400) 0;
   }
 
   thead {
@@ -141,7 +141,8 @@ export const Content = styled.div`
   th,
   td {
     display: table-cell;
-    padding: 1rem;
+    padding: var(--size-400);
+  }
   }
 
   code {
