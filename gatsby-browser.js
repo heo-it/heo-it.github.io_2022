@@ -5,4 +5,6 @@
  */
 
 // You can delete this file if you're not using it
-import 'prismjs/themes/prism-tomorrow.css'
+import { defineCustomElements as deckDeckGoElement } from '@deckdeckgo/highlight-code/dist/loader'
+
+deckDeckGoElement();
