@@ -113,9 +113,24 @@ export const Content = styled.div`
     display: table-cell;
     padding: var(--size-400);
   }
+
+  blockquote {
+    margin: 0.7rem 0;
+    padding: 0.5rem 1.5rem;
+    background: rgb(242, 242, 242);
+
+    p {
+      margin: 0.5rem 0;
+    }
   }
 
   code {
-    background: #e9ecef;
+    margin: 0px 0.2rem 0px 0px;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    background: rgb(230, 230, 230);
+    font-size: 95%;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
+    helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   }
 `;
