@@ -81,6 +81,7 @@ const GlobalStyle = css`
   :root {
     scroll-behavior: smooth;
     --size-300: 0.75rem;
+    --size-350: 0.9rem;
     --size-400: 1rem;
     --size-500: 1.33rem;
     --size-600: 1.77rem;
@@ -111,19 +112,20 @@ const GlobalStyle = css`
   }
 
   h1 {
-    font-size: var(--size-800);
-  }
-
-  h2 {
     font-size: var(--size-700);
   }
 
-  h3 {
+  h2 {
     font-size: var(--size-600);
   }
 
+  h3 {
+    font-size: var(--size-500);
+  }
+
   p {
-    font-size: var(--size-400);
+    font-size: var(--size-300);
+  }
   }
 
   ::selection {
