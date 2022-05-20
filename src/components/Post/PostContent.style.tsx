@@ -47,6 +47,7 @@ export const Content = styled.div`
 
   ul {
     list-style-type: disc;
+    font-size: var(--size-350);
   }
 
   ul ul {
@@ -62,7 +63,7 @@ export const Content = styled.div`
   }
 
   hr {
-    margin: 3.5rem 0;
+    margin: 2rem 0;
   }
 
   a {
