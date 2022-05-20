@@ -1,12 +1,12 @@
 import styled from '@emotion/styled'
 
 const Container = styled.div`
+  width: 55rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1300px;
+  max-width: 80rem;
   padding-left: var(--size-700);
   padding-right: var(--size-700);
-  height: 100%;
 
   @media screen and (max-width: 1000px) {
     & {
