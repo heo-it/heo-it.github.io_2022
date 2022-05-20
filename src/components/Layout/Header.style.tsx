@@ -6,7 +6,6 @@ export const StyledHeader = styled.header`
   position: fixed;
   width: 100%;
   background: linear-gradient(to left, #6868ac, #e9435e, #ecc371);
-  animation: gradient 20s ease infinite;
   padding-top: 0.6rem;
 `;
 
@@ -20,20 +19,16 @@ export const HeaderTitle = styled.div`
   & a {
     text-transform: uppercase;
     text-decoration: none;
-    font-size: var(--size-400);
     color: white;
   }
 `;
 
 export const StyledNav = styled.nav`
   display: flex;
+  flex-wrap: wrap;
   position: static;
-  padding: 0;
   background: transparent;
   backdrop-filter: unset;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-around;
 `;
 
 export const StyledNavListItem = styled(Link)`

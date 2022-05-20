@@ -5,57 +5,33 @@ export const Content = styled.div`
   padding: 2.5rem 0;
   word-wrap: break-word;
 
-  h1,
-  h2,
-  h3 {
-    font-weight: 600;
-    line-height: 120%;
-  }
-
   h1 {
-    font-size: 2.8rem;
-    margin-bottom: 2.7rem;
+    font-size: var(--size-600);
   }
 
   h2 {
-    font-size: 2.3rem;
-    margin-bottom: 2.4rem;
+    font-size: var(--size-500);
   }
 
   h3 {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
+    font-size: var(--size-400);
   }
 
   * + h1 {
-    margin-top: 5.4rem;
+    margin-top: var(--size-900);
   }
 
   * + h2 {
-    margin-top: 4.8rem;
+    margin-top: var(--size-800);
   }
 
   * + h3 {
-    margin-top: 4rem;
-  }
-
-  hr + h1,
-  hr + h2,
-  hr + h3 {
-    margin-top: 0;
+    margin-top: var(--size-700);
   }
 
   p {
-    margin: 1rem 0;
-  }
-
-  blockquote {
-    margin: 0.7rem 0;
-    padding: 0.5rem 1.5rem;
-
-    p {
-      margin: 0.5rem 0;
-    }
+    font-size: var(--size-350);
+    margin: var(--size-400) 0;
   }
 
   ol,
@@ -83,12 +59,6 @@ export const Content = styled.div`
 
   ol {
     list-style-type: decimal;
-  }
-
-  details {
-    summary {
-      cursor: pointer;
-    }
   }
 
   hr {

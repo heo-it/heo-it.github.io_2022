@@ -8,7 +8,6 @@ const Category = styled.span`
 
   & a {
     position: relative;
-    z-index: 2;
     background-color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     color: inherit;
@@ -18,7 +17,8 @@ const Category = styled.span`
   }
 
   & a:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(237, 85, 110, 0.7);
+    color: rgba(255, 255, 255, 1);
   }
 `;
 

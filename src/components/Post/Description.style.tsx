@@ -18,8 +18,3 @@ export const ContentDate = styled.span`
   font-size: var(--size-350);
   color: rgba(98, 92, 96, 0.7);
 `
-export const Line = styled.hr`
-  width: 100%;
-  margin: 0.9rem 0;
-  border: 0.05rem solid rgba(241, 240, 233, 0.5);
-`
