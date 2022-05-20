@@ -4,6 +4,7 @@ import Layout from 'components/Layout/Layout'
 import PostContent from 'components/Post/PostContent'
 import PostDescription from 'components/Post/Description'
 import { PostListItemType } from 'types/PostItem.types'
+import Comment from 'components/Post/Comment'
 
 type PostTemplateProps = {
   data: {
@@ -35,6 +36,8 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
     <Layout>
       <PostDescription title={title} date={date} categories={categories} />
       <PostContent html={ html }/>
+      <hr />
+      <Comment />
     </Layout>
   )
 }
