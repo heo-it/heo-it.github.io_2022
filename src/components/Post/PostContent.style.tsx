@@ -134,4 +134,9 @@ export const Content = styled.div`
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
     helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   }
+
+  @media (max-width: 55rem) {
+    width: 100%;
+    padding: 1.5rem 0;
+  }
 `;

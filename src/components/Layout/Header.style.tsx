@@ -8,6 +8,10 @@ export const StyledHeader = styled.header`
   background: linear-gradient(to left, #6868ac, #e9435e, #ecc371);
   padding-top: 0.6rem;
   z-index: 1000;
+
+  @media (max-width: 60rem) {
+    width: 100%;
+  }
 `;
 
 export const HeaderWrapper = styled(Container)`
@@ -45,5 +49,9 @@ export const StyledNavListItem = styled(Link)`
     width: 1.5rem;
     height: 1.5rem;
     fill: rgba(255, 255, 255, 0.9);
+  }
+
+  @media (max-width: 60rem) {
+    flex-direction: row;
   }
 `;

@@ -8,11 +8,9 @@ const Container = styled.div`
   padding-left: var(--size-700);
   padding-right: var(--size-700);
 
-  @media screen and (max-width: 1000px) {
-    & {
-      padding-left: var(--size-400);
-      padding-right: var(--size-400);
-    }
+  @media screen and (max-width: 70rem) {
+    padding-left: var(--size-300);
+    padding-right: var(--size-300);
   }
 `;
 

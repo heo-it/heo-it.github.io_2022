@@ -5,6 +5,12 @@ export const StyledIntroduction = styled.div`
   align-items: center;
   justify-content: center;
   padding: 5rem 0;
+
+  @media (max-width: 55rem) {
+    width: 100%;
+    height: 300px;
+    padding: 0 20px;
+  }
 `
 
 export const IntroduceWrapper = styled.div`
