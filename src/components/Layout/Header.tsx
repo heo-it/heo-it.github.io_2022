@@ -18,7 +18,7 @@ const Header: FunctionComponent<HeaderProps> = function ({ title }) {
     <StyledHeader>
       <HeaderWrapper>
         <HeaderTitle>
-          <Link to="/"><h3># {title}</h3></Link>
+          <Link to="/"><h2># {title}</h2></Link>
         </HeaderTitle>
 
         <StyledNav>
