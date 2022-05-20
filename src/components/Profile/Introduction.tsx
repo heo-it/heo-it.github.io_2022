@@ -3,7 +3,6 @@ import { IGatsbyImageData } from 'gatsby-plugin-image'
 import {
   StyledIntroduction,
   IntroduceWrapper,
-  Name,
   Introduce,
   Contact
 } from './Introduction.style'
@@ -20,7 +19,7 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
     <StyledIntroduction>
       <ProfileImage profileImage={profileImage} />
       <IntroduceWrapper>
-        <Name>허예진</Name>
+        <h1>허예진</h1>
         <Introduce>안녕하세요. 프론트엔드 개발자 허예진 입니다.</Introduce>
         <Contact>
           <a>Mail</a>

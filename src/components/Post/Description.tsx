@@ -3,7 +3,6 @@ import {
   ContentTitle,
   ContentDetails,
   ContentDate,
-  Line
 } from './Description.style'
 import CategoryList from 'components/Post/CategoryList'
 
@@ -23,7 +22,7 @@ const Description: FunctionComponent<DescriptionProps> = function ({
         <ContentDate>{date}</ContentDate>
         <CategoryList categories={categories} />
       </ContentDetails>
-      <Line />
+      <hr />
     </>
   )
 }

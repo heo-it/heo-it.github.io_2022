@@ -126,6 +126,11 @@ const GlobalStyle = css`
   p {
     font-size: var(--size-300);
   }
+
+  hr {
+    width: 100%;
+    margin: var(--size-350) 0;
+    border: 0.05rem solid rgba(241, 240, 233, 0.5);
   }
 
   ::selection {
