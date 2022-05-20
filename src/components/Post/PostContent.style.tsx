@@ -135,6 +135,11 @@ export const Content = styled.div`
     helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   }
 
+  mark {
+    background-color: rgba(251, 238, 184, 1);
+    padding: 0.1rem;
+  }
+
   @media (max-width: 55rem) {
     width: 100%;
     padding: 1.5rem 0;
