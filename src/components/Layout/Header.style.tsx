@@ -7,6 +7,7 @@ export const StyledHeader = styled.header`
   width: 100%;
   background: linear-gradient(to left, #6868ac, #e9435e, #ecc371);
   padding-top: 0.6rem;
+  z-index: 1000;
 `;
 
 export const HeaderWrapper = styled(Container)`
