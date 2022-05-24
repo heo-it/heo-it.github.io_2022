@@ -8,10 +8,6 @@ export const StyledFooter = styled.footer`
 
 export const FooterAttribution = styled.p`
   font-size: var(--size-300);
-
-  & a {
-    color: inherit;
-  }
 `;
 
 export const FooterWrapper = styled(Container)`

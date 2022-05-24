@@ -137,6 +137,11 @@ const GlobalStyle = css`
   p, li {
     max-width: none;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `
 
 export default GlobalStyle

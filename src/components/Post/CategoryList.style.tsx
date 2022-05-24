@@ -9,8 +9,6 @@ const Category = styled.span`
   & a {
     position: relative;
     background-color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    color: inherit;
     padding: 0.2rem 0.6rem;
     border: 1px solid rgba(230, 230, 230, 1);
     border-radius: 4px;

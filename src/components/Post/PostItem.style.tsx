@@ -30,11 +30,6 @@ export const PostListTitle = styled.h2`
   font-size: var(--size-600);
   font-weight: 700;
 
-  & a {
-    text-decoration: none;
-    color: inherit;
-  }
-
   & a::after {
     content: '';
     position: absolute;

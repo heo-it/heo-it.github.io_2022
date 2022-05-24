@@ -6,11 +6,6 @@ export const StyledCategoryList = styled.div`
   padding: 2rem;
   border: 0.1rem solid rgba(98, 92, 96, 0.3);
   border-radius: 0.5rem;
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
 `;
 
 export const StyledLink = styled(Link)`
