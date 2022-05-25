@@ -86,6 +86,7 @@ module.exports = {
         siteUrl: '<https://github.com/heo-it>',
         stripQueryString: true
       }
-    }
+    },
+    'gatsby-plugin-sitemap'
   ],
 }
