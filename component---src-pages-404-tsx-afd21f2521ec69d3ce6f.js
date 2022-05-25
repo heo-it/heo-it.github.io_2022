@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[218],{2224:function(t,u,e){e.r(u);var a=e(896),l=e(3431);u.default=function(){return(0,l.tZ)(a.Z,null,(0,l.tZ)("h3",null,"404 페이지"))}}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-afd21f2521ec69d3ce6f.js.map
