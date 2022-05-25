@@ -10,7 +10,7 @@ const Footer: FunctionComponent = function () {
     <StyledFooter>
       <FooterWrapper>
         <FooterAttribution>
-          © 2022 허예진 Powered by 
+          © 2022 허예진 Powered by &nbsp;
           <a href="https://www.gatsbyjs.com/">Gatsby</a>
         </FooterAttribution>
       </FooterWrapper>
