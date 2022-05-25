@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from 'react'
-import { IGatsbyImageData } from 'gatsby-plugin-image'
 import {
   StyledIntroduction,
   IntroduceWrapper,
@@ -8,16 +7,10 @@ import {
 } from './Introduction.style'
 import ProfileImage from './ProfileImage'
 
-type IntroductionProps = {
-  profileImage: IGatsbyImageData
-}
-
-const Introduction: FunctionComponent<IntroductionProps> = function ({
-  profileImage
-}) {
+const Introduction: FunctionComponent = function () {
   return (
     <StyledIntroduction>
-      <ProfileImage profileImage={profileImage} />
+      <ProfileImage />
       <IntroduceWrapper>
         <h1>허예진</h1>
         <Introduce>안녕하세요. 프론트엔드 개발자 허예진 입니다.</Introduce>

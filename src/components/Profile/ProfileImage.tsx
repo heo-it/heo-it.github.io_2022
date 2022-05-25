@@ -1,10 +1,14 @@
 import React, { FunctionComponent } from 'react'
-import { graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import styled from '@emotion/styled'
 
 type ProfileImageProps = {
-  profileImage: IGatsbyImageData
+  file: {
+    childImageSharp: {
+      gatsbyImageData: IGatsbyImageData
+    }
+  }
 }
 
 const ProfileImageWrapper = styled(GatsbyImage)`
@@ -19,20 +23,21 @@ const ProfileImageWrapper = styled(GatsbyImage)`
   }
 `
 
-const ProfileImage: FunctionComponent<ProfileImageProps> = function ({ 
-  profileImage
-}) {
-  return <ProfileImageWrapper image={profileImage} alt="Profile Image" />
-}
+const ProfileImage: FunctionComponent = function () {
 
-export const ImageQuery = graphql`
-  {
-    file {
-      childImageSharp {
-        gatsbyImageData(width: 700)
+  const { file }: ProfileImageProps = useStaticQuery(
+    graphql`
+      query {
+        file(name: { eq: "profile-image" }) {
+          childImageSharp {
+            gatsbyImageData(width: 120, height: 120)
+          }
+        }
       }
-    }
-  }
-`
+    `
+  )
+
+  return <ProfileImageWrapper image={file.childImageSharp.gatsbyImageData} alt="Profile Image" />
+}
 
 export default ProfileImage
