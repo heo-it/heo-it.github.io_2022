@@ -33,7 +33,7 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   } = edges[0]
 
   return (
-    <Layout>
+    <Layout title={title}>
       <PostDescription title={title} date={date} categories={categories} />
       <PostContent html={ html }/>
       <hr />

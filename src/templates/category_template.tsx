@@ -26,7 +26,7 @@ const CategoryTemplate: FunctionComponent<CategoryTemplateProps> = function ({
   pageContext: { fieldValue, totalCount }
 }) {
   return (
-    <Layout>
+    <Layout title={fieldValue} description={`${totalCount}개의 게시글`}>
       <Description title={fieldValue} description={`${totalCount}개의 게시글`} />
       <PostList posts={ edges } />
     </Layout>

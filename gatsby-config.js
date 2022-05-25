@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Heo-It DevLog`,
+    description: `개발하면서 공부한 내용을 기록하는 블로그 입니다.`,
+    author: `Yejin`,
+    siteUrl: `https://heo-it.github.io/`,
   },
   plugins: [
     {

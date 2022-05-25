@@ -4,6 +4,7 @@ import { PostListItemType } from 'types/PostItem.types'
 import Layout from 'components/Layout/Layout'
 import PostList from 'components/Post/PostList'
 import Description from 'components/Layout/Description'
+import SEO from 'components/Layout/SEO'
 
 type BlogProps = {
   data: {
@@ -19,7 +20,7 @@ const BlogPage: FunctionComponent<BlogProps> = function ({
   }
 }) {
  return (
-  <Layout>
+  <Layout title="blog" description={`${edges.length}개의 게시글`}>
     <Description title="blog" description={`${edges.length}개의 게시글`} />
     <PostList posts={ edges } />
   </Layout>
