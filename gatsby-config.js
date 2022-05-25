@@ -100,5 +100,12 @@ module.exports = {
         icon: 'src/assets/image/icon.png'
       }
     },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://heo-it.github.io/',
+        stripQueryString: true,
+      },
+    },
   ],
 }
