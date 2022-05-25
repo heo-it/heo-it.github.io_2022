@@ -80,5 +80,12 @@ module.exports = {
       }
     },
     `gatsby-plugin-image`,
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: '<https://github.com/heo-it>',
+        stripQueryString: true
+      }
+    }
   ],
 }
