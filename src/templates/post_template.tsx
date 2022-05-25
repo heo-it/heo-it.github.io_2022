@@ -40,7 +40,7 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
     <Layout title={title}>
       <PostImage postImage={gatsbyImageData} />
       <PostDescription title={title} date={date} categories={categories} />
-      <PostContent html={ html }/>
+      <PostContent html={html}/>
       <hr />
       <Comment />
     </Layout>
@@ -56,7 +56,6 @@ export const queryMarkdownDataBySlug = graphql`
           frontmatter {
             title
             date
-            summary
             categories
             thumbnail {
               childImageSharp {

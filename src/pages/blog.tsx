@@ -4,7 +4,6 @@ import { PostListItemType } from 'types/PostItem.types'
 import Layout from 'components/Layout/Layout'
 import PostList from 'components/Post/PostList'
 import Description from 'components/Layout/Description'
-import SEO from 'components/Layout/SEO'
 
 type BlogProps = {
   data: {
