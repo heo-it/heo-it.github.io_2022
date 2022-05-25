@@ -93,6 +93,12 @@ module.exports = {
       options: {
         policy: [{ userAgent: '*', allow: '/' }]
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: 'src/assets/image/icon.png'
+      }
+    },
   ],
 }
