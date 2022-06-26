@@ -43,6 +43,7 @@ export const BlogQuery = graphql`
             summary
             categories
           }
+          timeToRead
         }
       }
     }

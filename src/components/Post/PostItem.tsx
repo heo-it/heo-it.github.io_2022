@@ -11,14 +11,15 @@ import {
   PostFrontmatterType
 } from 'types/PostItem.types'
 
-type PostItemProps = PostFrontmatterType & { link: string }
+type PostItemProps = PostFrontmatterType & { link: string, timeToRead: number }
 
 const PostItem: FunctionComponent<PostItemProps> = function ({
   title,
   date,
   categories,
   summary,
-  link
+  link,
+  timeToRead
 }) {
   return (
     <StyledPostListItem>
@@ -34,6 +35,7 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
       />
       <PostListMeta>
         <span>{date}</span>
+        <span>{timeToRead} min read</span>
       </PostListMeta>
     </StyledPostListItem>
   )

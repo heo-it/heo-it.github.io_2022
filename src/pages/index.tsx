@@ -43,6 +43,7 @@ export const IndexQuery = graphql`
             summary
             categories
           }
+          timeToRead
         }
       }
     }
