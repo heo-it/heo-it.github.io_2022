@@ -6,10 +6,8 @@ export const StyledIntroduction = styled.div`
   justify-content: center;
   padding: 5rem 0;
 
-  @media (max-width: 55rem) {
-    width: 100%;
-    height: 300px;
-    padding: 0 20px;
+  @media (max-width: 768px) {
+    padding-right: 1rem;
   }
 `
 

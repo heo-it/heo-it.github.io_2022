@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 import Layout from 'components/Layout/Layout'
 import PostContent from 'components/Post/PostContent'
-import PostDescription from 'components/Post/Description'
+import Description from 'components/Post/Description'
 import PostImage from 'components/Post/PostImage'
 import Comment from 'components/Post/Comment'
 import { PostListItemType } from 'types/PostItem.types'
@@ -33,13 +33,14 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
           childImageSharp: { gatsbyImageData },
         }
       },
+      timeToRead
     },
   } = edges[0]
 
   return (
     <Layout title={title}>
       <PostImage postImage={gatsbyImageData} />
-      <PostDescription title={title} date={date} categories={categories} />
+      <Description title={title} date={date} categories={categories} timeToRead={timeToRead}/>
       <PostContent html={html}/>
       <hr />
       <Comment />
@@ -63,6 +64,7 @@ export const queryMarkdownDataBySlug = graphql`
               }
             }
           }
+          timeToRead
         }
       }
     }

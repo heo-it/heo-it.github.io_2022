@@ -46,6 +46,8 @@ export const PostListExcerpt = styled.p`
 `
 
 export const PostListMeta = styled.div`
+  display: flex;
+  justify-content: space-between;
   margin-top: 2rem;
 
   font-size: var(--size-300);

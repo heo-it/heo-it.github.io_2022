@@ -15,6 +15,11 @@ const LayoutWrapper = styled.div`
   & footer {
     margin-top: auto;
   }
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    padding: 1rem 5px 0 5px;
+  }
 `
 
 export default LayoutWrapper

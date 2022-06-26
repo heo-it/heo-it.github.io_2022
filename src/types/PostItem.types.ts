@@ -20,5 +20,6 @@ export type PostListItemType = {
     }
     html: string
     frontmatter: PostFrontmatterType
+    timeToRead: number
   }
 }
