@@ -1,7 +1,13 @@
+---
+date: '26 Jan, 2022'
+title: '[JavaScript] ES6 구조분해할당'
+menu: 'javascript'
+categories: ['JavaScript']
+summary: 'ES6의 구조 분해 할당 문법에 대해 정리'
+thumbnail: './image/es6.png'
+---
 # ES6 - 구조 분해 할당
-
-> Javascript에서 자주 사용하는 배열이나 객체를 변수로 **분해**할 수 있게 해주는 문법
-> 
+> Javascript에서 자주 사용하는 배열이나 객체를 변수로 **분해**할 수 있게 해주는 문법에 대해서 정리g
 
 ## 1. 배열 분해하기
 

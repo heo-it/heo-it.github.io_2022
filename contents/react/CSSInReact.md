@@ -1,3 +1,11 @@
+---
+date: '30 Mar, 2022'
+title: '[React] CSS in React'
+menu: 'react'
+categories: ['React']
+summary: 'React의 다양한 css 사용 방법 정리'
+thumbnail: './image/CSSinReact.png'
+---
 # CSS in React
 
 React로 개발 중 다양한 css 사용 방법이 존재한다.
@@ -37,13 +45,13 @@ function App() {
 
 ## **CSS Modules**
 
-위에서 소개한 외부 스타일 시트를 사용하는 방법은 React 앱의 규모가 커짐에 따라 css 이름이 겹치고 지정하는데 어려움을 겪을 수 있습니다. 기본적으로 글로벌 네임 스페이스(global namespace)를 사용하기 때문에, 만약 2개의 css 파일에 동일한 클래스에 대한 스타일이 적용되어 있다면, 해당 클래스가 적용된 엘리먼드는 2개의 스타일에 모두 영향을 받게 됩니다.
+위에서 소개한 외부 스타일 시트를 사용하는 방법은 React 앱의 규모가 커짐에 따라 css 이름이 겹치고 지정하는데 어려움을 겪을 수 있다. 기본적으로 글로벌 네임 스페이스(global namespace)를 사용하기 때문에, 만약 2개의 css 파일에 동일한 클래스에 대한 스타일이 적용되어 있다면, 해당 클래스가 적용된 엘리먼드는 2개의 스타일에 모두 영향을 받게 된다.
 
-이 문제를 해결하기 위한 방법으로 css파일에 고유의 네임 스페이스를 부여해주는 css 모듈 (CSS Modules)이라는 기법이 있습니다. React 컴포넌트에 Css 모듈을 통해서 스타일을 적용하는 방법은 다음과 같습니다.
+이 문제를 해결하기 위한 방법으로 css파일에 고유의 네임 스페이스를 부여해주는 css 모듈 (CSS Modules)이라는 기법이 있다. React 컴포넌트에 Css 모듈을 통해서 스타일을 적용하는 방법은 다음과 같다.
 
-- `.css` 이 아닌 `.module.css` 확장자를 사용해야합니다.
-- `.module.css` import시 해당 파일의 확장자를 모두 작성해줘야합니다. (`import styles from ./button.module.css` )
-- 엘리먼트에 `className` 속성을 지정해 줄 때 어느 모듈 소속인지 명시해 줍니다. (`styles.button` )
+- `.css` 이 아닌 `.module.css` 확장자를 사용해야함.
+- `.module.css` import시 해당 파일의 확장자를 모두 작성해줘야함. (`import styles from ./button.module.css` )
+- 엘리먼트에 `className` 속성을 지정해 줄 때 어느 모듈 소속인지 명시해 줘야함. (`styles.button` )
 
 ```jsx
 import React from 'react';
