@@ -10,7 +10,7 @@ thumbnail: './image/CSSinReact.png'
 
 React로 개발 중 다양한 css 사용 방법이 존재한다.
 
-물론 개발자 입장에서 많은 선택지가 있다는게 좋긴 하지만 재사용 여부, 퍼포먼스 등 상황에 따라 올바르게 사용하기 위해 특징에 따라 정리해보았다 !
+물론 개발자 입장에서 많은 선택지가 있다는게 좋긴 하지만 재사용 여부, 퍼포먼스 등 상황에 따라 올바르게 사용하기 위해 특징에 따라 정리해보았다.
 
 ## lnline Style
 
@@ -28,7 +28,7 @@ React로 개발 중 다양한 css 사용 방법이 존재한다.
 
 ## **External Stylesheet**
 
-일반적인 css 파일에 스타일을 적용하는 방법으로 기존에 사용하던것과 마찬가지로 css파일을 import 해주면 된다 ! 
+일반적인 css 파일에 스타일을 적용하는 방법으로 기존에 사용하던것과 마찬가지로 css파일을 import 해주면 된다 !
 
 ```jsx
 import './App.css';
@@ -50,7 +50,7 @@ function App() {
 이 문제를 해결하기 위한 방법으로 css파일에 고유의 네임 스페이스를 부여해주는 css 모듈 (CSS Modules)이라는 기법이 있다. React 컴포넌트에 Css 모듈을 통해서 스타일을 적용하는 방법은 다음과 같다.
 
 - `.css` 이 아닌 `.module.css` 확장자를 사용해야함.
-- `.module.css` import시 해당 파일의 확장자를 모두 작성해줘야함. (`import styles from ./button.module.css` )
+- `.module.css` import시 해당 파일의 확장자를 모두 작성해줘야 함. (`import styles from ./button.module.css` )
 - 엘리먼트에 `className` 속성을 지정해 줄 때 어느 모듈 소속인지 명시해 줘야함. (`styles.button` )
 
 ```jsx
@@ -85,7 +85,7 @@ const StyleContainer = styled.div`
 function App() {
 	return (
 		<>
-			<StyledContainer/>		
+			<StyledContainer/>
 		</>
 	)
 }
@@ -93,7 +93,7 @@ function App() {
 
 ### 전역 스타일링
 
-styled-componenet로 전역 스타일(global style)을 정의하는 방법으로 createGlobalStyle()함수를 제공하고 있다.
+styled-componenet로 전역 스타일(global style)을 정의하는 방법으로 `createGlobalStyle()`함수를 제공하고 있다.
 
 예를 들어 스타일 컴포넌트로 antd를 사용하고 있는 경우 antd에서 정의한 여러가지 스타일이 있는데, 이것들을 변경하고 싶은 경우 혹은 `body, h1` 등 엘리먼트에 기본 스타일을 적용하고 싶은 경우 유용하게 사용할 수 있다.
 
