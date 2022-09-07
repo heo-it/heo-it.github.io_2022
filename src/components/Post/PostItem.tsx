@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { Link } from 'gatsby'
-import CategoryList from 'components/Post/CategoryList'
+import CategoryList from 'components/Category/CategoryList'
 import {
   StyledPostListItem,
   PostListTitle,

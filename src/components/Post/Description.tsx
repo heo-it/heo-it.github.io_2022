@@ -4,7 +4,7 @@ import {
   ContentDetails,
   ContentDate,
 } from './Description.style'
-import CategoryList from 'components/Post/CategoryList'
+import CategoryList from 'components/Category/CategoryList'
 
 type DescriptionProps = {
   title: string

@@ -8,10 +8,8 @@ const Category = styled.span`
 
   & a {
     position: relative;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 0.2rem 0.6rem;
-    border: 1px solid rgba(230, 230, 230, 1);
-    border-radius: 4px;
+    background-color: #c6dce4;
+    padding: 0.2rem 0.5rem;
   }
 
   & a:hover {
