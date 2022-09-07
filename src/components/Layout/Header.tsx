@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { Link } from 'gatsby'
-import { BiCategoryAlt, BiPurchaseTagAlt, BiGame } from 'react-icons/bi'
+import { BiCategoryAlt, BiPurchaseTagAlt } from 'react-icons/bi'
 import {
   StyledHeader,
   HeaderWrapper,
@@ -28,10 +28,6 @@ const Header: FunctionComponent<HeaderProps> = function ({ title }) {
 
           <StyledNavListItem to="/category">
             <BiPurchaseTagAlt />
-          </StyledNavListItem>
-
-          <StyledNavListItem to="/about">
-            <BiGame />
           </StyledNavListItem>
         </StyledNav>
       </HeaderWrapper>

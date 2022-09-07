@@ -31,7 +31,7 @@ export const Content = styled.div`
 
   p {
     font-size: var(--size-350);
-    margin: var(--size-400) 0;
+    margin: var(--size-300) 0;
   }
 
   ol,
@@ -117,7 +117,7 @@ export const Content = styled.div`
 
   blockquote {
     margin: 0.7rem 0;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     background: rgb(242, 242, 242);
 
     p {
@@ -127,7 +127,7 @@ export const Content = styled.div`
 
   code {
     margin: 0px 0.2rem 0px 0px;
-    padding: 0.2rem 0.3rem;
+    padding: 0.1rem 0.2rem;
     border-radius: 0.3rem;
     background: rgb(230, 230, 230);
     font-size: 95%;
