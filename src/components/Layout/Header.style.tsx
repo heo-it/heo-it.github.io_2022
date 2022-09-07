@@ -5,9 +5,10 @@ import { Link } from 'gatsby'
 export const StyledHeader = styled.header`
   position: fixed;
   width: 100%;
-  background: linear-gradient(to left, #6868ac, #e9435e, #ecc371);
   padding-top: 0.6rem;
   z-index: 1000;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+  background-color: #fff;
 
   @media (max-width: 768px) {
     width: 100vw;
@@ -30,7 +31,7 @@ export const HeaderTitle = styled.div`
   & a {
     text-transform: uppercase;
     text-decoration: none;
-    color: white;
+    color: #a9cbd7;
   }
 
   @media (max-width: 768px) {
@@ -58,7 +59,7 @@ export const StyledNavListItem = styled(Link)`
   svg {
     width: 1.5rem;
     height: 1.5rem;
-    fill: rgba(255, 255, 255, 0.9);
+    fill: #9cbeca;
   }
 
   @media (max-width: 768px) {

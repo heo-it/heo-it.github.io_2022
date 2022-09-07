@@ -131,7 +131,7 @@ const GlobalStyle = css`
   }
 
   ::selection {
-    background: rgba(232, 99, 120, 0.5);
+    background: #d4e5eb;
   }
 
   p, li {
