@@ -2,10 +2,7 @@ import styled from '@emotion/styled'
 
 export const StyledIntroduction = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5rem 0;
-
+  flex-direction: column;
   @media (max-width: 768px) {
     padding-right: 1rem;
   }
@@ -14,23 +11,33 @@ export const StyledIntroduction = styled.div`
 export const IntroduceWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 0 0 0 1.8rem;
-  cursor: default;
+  margin-top: var(--size-800);
+  margin-bottom: var(--size-600);
+  padding-left: 1.8rem;
+
+  > h1 {
+    max-width: none;
+  }
+
+  > p {
+    width: fit-content;
+    font-size: var(--size-400);
+    margin-top: 15px;
+    padding: 0.1rem;
+    color: #6a7280;
+  }
 `
 
-export const Introduce = styled.p`
-  font-size: var(--size-350);
-  line-height: 110%;
-  margin: var(--size-400) 0 var(--size-400);
-`
-
-export const Contact = styled.p`
-  font-size: 0.8rem;
+export const Contact = styled.div`
   display: flex;
   flex-direction: row;
+  padding: 0 0 2rem;
+  margin: 0 0 2rem 2rem;
 
-  > a {
-    margin-right: 0.7rem;
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #9cbeca;
+    margin-right: 1.5rem;
   }
 `
