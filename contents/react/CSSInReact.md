@@ -1,6 +1,6 @@
 ---
 date: '30 Mar, 2022'
-title: '[React] CSS in React'
+title: 'CSS in React'
 menu: 'react'
 categories: ['React']
 summary: 'React의 다양한 css 사용 방법 정리'

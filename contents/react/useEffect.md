@@ -1,6 +1,6 @@
 ---
 date: '20 Mar, 2022'
-title: '[React] useEffect'
+title: 'useEffect'
 menu: 'react'
 categories: ['React']
 summary: 'useEffect의 생명 주기 별 특정 작업을 처리하는 방법 정리'

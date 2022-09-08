@@ -1,6 +1,6 @@
 ---
 date: '26 Jan, 2022'
-title: '[JavaScript] ES6 구조분해할당'
+title: 'ES6 구조분해할당'
 menu: 'javascript'
 categories: ['JavaScript']
 summary: 'ES6의 구조 분해 할당 문법에 대해 정리'

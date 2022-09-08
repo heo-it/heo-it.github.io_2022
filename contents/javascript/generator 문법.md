@@ -1,6 +1,6 @@
 ---
 date: '13 Jun, 2022'
-title: '[JavaScript] generator 문법'
+title: 'generator 문법'
 menu: 'javascript'
 categories: ['JavaScript']
 summary: '제너레이터 함수에 한 정리'
