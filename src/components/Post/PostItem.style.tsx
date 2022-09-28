@@ -29,7 +29,6 @@ export const PostListTitle = styled.h2`
   margin-bottom: var(--size-400);
   text-transform: capitalize;
   font-size: var(--size-600);
-  font-weight: 700;
 
   & a::after {
     content: '';

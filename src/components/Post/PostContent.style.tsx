@@ -98,12 +98,12 @@ export const Content = styled.div`
   }
 
   em {
-    font-size: 1.2rem;
     font-style: italic;
     display: block;
-    text-align: center;
-    margin: -1.5rem auto 0;
-    word-break: keep-all;
+    color: rgba(120, 119, 116, 1);
+    fill: rgba(120, 119, 116, 1);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   table {
