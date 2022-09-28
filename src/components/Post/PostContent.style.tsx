@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 
 export const Content = styled.div`
   margin: 0 auto;
-  padding: 2.5rem 0;
+  padding: 1rem 0;
   word-wrap: break-word;
 
   h1, h2, h3 {
