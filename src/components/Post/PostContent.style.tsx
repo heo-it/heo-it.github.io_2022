@@ -5,16 +5,23 @@ export const Content = styled.div`
   padding: 2.5rem 0;
   word-wrap: break-word;
 
+  h1, h2, h3 {
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
   h1 {
     font-size: var(--size-600);
   }
 
   h2 {
-    font-size: var(--size-500);
+    font-size: var(--size-550);
   }
 
   h3 {
-    font-size: var(--size-400);
+    font-size: var(--size-500);
   }
 
   * + h1 {
@@ -30,24 +37,29 @@ export const Content = styled.div`
   }
 
   p {
-    font-size: var(--size-350);
-    margin: var(--size-300) 0;
+    font-size: var(--size-400);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
 
   ol,
   ul {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0 0 0 3rem;
+    margin: 0;
+    margin-block-start: 0.6em;
+    margin-block-end: 0.6em;
 
     p {
       margin: 0.5rem 0;
+    }
+
+    li {
+      margin-block-start: 0.6em;
+      margin-block-end: 0.6em;
     }
   }
 
   ul {
     list-style-type: disc;
-    font-size: var(--size-350);
   }
 
   ul ul {
@@ -116,9 +128,9 @@ export const Content = styled.div`
   }
 
   blockquote {
-    margin: 0.7rem 0;
-    padding: 0.5rem 1rem;
-    background: rgb(242, 242, 242);
+    margin: 1em 0;
+    padding-left: 1em;
+    border-left: 3px solid rgb(55, 53, 47);
 
     p {
       margin: 0.5rem 0;
@@ -129,14 +141,15 @@ export const Content = styled.div`
     margin: 0px 0.2rem 0px 0px;
     padding: 0.1rem 0.2rem;
     border-radius: 0.3rem;
-    background: rgb(230, 230, 230);
+    background: rgb(237, 237, 235);
     font-size: 95%;
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
     helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    color: rgb(218, 97, 91);
   }
 
   mark {
-    background-color: rgba(251, 238, 184, 1);
+    background-color: rgba(250, 243, 221);
     padding: 0.1rem;
   }
 
