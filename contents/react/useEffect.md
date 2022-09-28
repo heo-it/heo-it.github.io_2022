@@ -1,5 +1,5 @@
 ---
-date: '20 Mar, 2022'
+date: '2021년 9월 25일 오후 10:37'
 title: 'useEffect'
 menu: 'react'
 categories: ['React']

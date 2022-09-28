@@ -1,5 +1,5 @@
 ---
-date: '26 Jan, 2022'
+date: '2022년 1월 26일 오후 4:21'
 title: 'ES6 구조분해할당'
 menu: 'javascript'
 categories: ['JavaScript']

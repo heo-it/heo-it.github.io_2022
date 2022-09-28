@@ -1,5 +1,5 @@
 ---
-date: '13 Jun, 2022'
+date: '2022년 1월 27일 오전 11:38'
 title: 'generator 문법'
 menu: 'javascript'
 categories: ['JavaScript', ES6+]
