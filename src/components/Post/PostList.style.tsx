@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const PostListWrapper = styled.div`
+export const PostListWrapper = styled.ul`
   padding: 0;
   list-style: none;
   display: grid;
