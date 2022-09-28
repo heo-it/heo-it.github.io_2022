@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 export const ContentTitle = styled.h1`
   word-break: keep-all;
   font-size: var(--size-600);
-  font-weight: 600;
   padding: 1.5rem 0;
   line-height: 130%;
 `

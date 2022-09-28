@@ -79,7 +79,8 @@ const GlobalStyle = css`
     --size-300: 0.75rem;
     --size-350: 0.9rem;
     --size-400: 1rem;
-    --size-500: 1.33rem;
+    --size-500: 1.25rem;
+    --size-550: 1.5rem;
     --size-600: 1.77rem;
     --size-700: 2.36rem;
     --size-800: 3.15rem;
@@ -105,7 +106,7 @@ const GlobalStyle = css`
   h1,
   h2,
   h3 {
-    font-weight: 700;
+    font-weight: 600;
   }
 
   h1 {
@@ -121,7 +122,7 @@ const GlobalStyle = css`
   }
 
   p {
-    font-size: var(--size-300);
+    font-size: var(--size-400);
   }
 
   hr {
