@@ -4,7 +4,7 @@ title: 'useEffect'
 menu: 'react'
 categories: ['React']
 summary: 'useEffect의 생명 주기 별 특정 작업을 처리하는 방법 정리'
-thumbnail: './image/useEffect.png'
+thumbnail: './thumbnail/useEffect.png'
 ---
 # 들어가며
 > useEffect라는 Hook을 사용하여 컴포넌트가 마운트 됐을 때 (처음 나타났을 때), 언마운트 됐을 때(사라질 때), 그리고 업데이트 될 때(특정 props가 바뀔 때) 해당 작업을 처리하는 방법 정리해보았다.
