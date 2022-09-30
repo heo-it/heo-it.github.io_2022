@@ -46,6 +46,13 @@ const GlobalStyle = css`
     font: inherit;
   }
 
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    border: 0 solid #e5e7eb;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html:focus-within {
       scroll-behavior: auto;
@@ -123,6 +130,24 @@ const GlobalStyle = css`
 
   p {
     font-size: var(--size-400);
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: var(--size-600);
+    }
+
+    h2 {
+      font-size: var(--size-500);
+    }
+
+    h3 {
+      font-size: var(--size-400);
+    }
+
+    p {
+      font-size: var(--size-300);
+    }
   }
 
   hr {

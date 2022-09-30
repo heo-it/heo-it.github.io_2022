@@ -12,6 +12,10 @@ export const BoardList = styled.li`
   padding: 1rem;
   border: 0 solid #e4e7eb;
   border-bottom-width: 1px;
+
+  @media screen and (max-width: 768px) {
+    padding: var(--size-300);
+  }
 `
 
 export const ListWrapper = styled.div`

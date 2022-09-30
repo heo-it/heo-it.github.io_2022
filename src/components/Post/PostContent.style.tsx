@@ -13,15 +13,29 @@ export const Content = styled.div`
   }
 
   h1 {
-    font-size: var(--size-600);
+    font-size: var(--size-700);
   }
 
   h2 {
-    font-size: var(--size-550);
+    font-size: var(--size-600);
   }
 
   h3 {
-    font-size: var(--size-500);
+    font-size: var(--size-550);
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: var(--size-600);
+    }
+
+    h2 {
+      font-size: var(--size-550);
+    }
+
+    h3 {
+      font-size: var(--size-500);
+    }
   }
 
   * + h1 {
@@ -153,7 +167,7 @@ export const Content = styled.div`
     padding: 0.1rem;
   }
 
-  @media (max-width: 55rem) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     padding: 1.5rem 0;
   }

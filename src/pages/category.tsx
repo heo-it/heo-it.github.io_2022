@@ -31,8 +31,8 @@ const Category: FunctionComponent<CategoryProps> = function ({
     <Layout title="category" description={`${group.length}개의 카테고리`}>
       <Description title="category" description={`${group.length}개의 카테고리`} />
       <StyledCategoryList>
-        {group.map(({ fieldValue, totalCount }) => (
-          <StyledLink to={`${fieldValue}`}>
+        {group.map(({ fieldValue, totalCount}, index) => (
+          <StyledLink to={`${fieldValue}`} key={index}>
             <span>{fieldValue}</span>
             {totalCount}
           </StyledLink>

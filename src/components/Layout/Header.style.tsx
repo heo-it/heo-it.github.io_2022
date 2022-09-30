@@ -9,10 +9,6 @@ export const StyledHeader = styled.header`
   z-index: 1000;
   box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
   background-color: #fff;
-
-  @media (max-width: 768px) {
-    width: 100vw;
-  }
 `;
 
 export const HeaderWrapper = styled(Container)`
@@ -22,6 +18,7 @@ export const HeaderWrapper = styled(Container)`
   justify-content: space-between;
 
   @media (max-width: 768px) {
+    width: 95%;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
   }
@@ -35,7 +32,9 @@ export const HeaderTitle = styled.div`
   }
 
   @media (max-width: 768px) {
-    font-size: var(--size-300);
+    h2 {
+      font-size: var(--size-600);
+    }
   }
 `;
 

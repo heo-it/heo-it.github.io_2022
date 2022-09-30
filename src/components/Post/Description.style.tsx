@@ -1,16 +1,17 @@
 import styled from '@emotion/styled'
 
+export const DescriptionWrappper = styled.div`
+  padding: 1rem 0.5rem 0;
+`;
+
 export const ContentTitle = styled.h1`
   word-break: keep-all;
-  font-size: var(--size-600);
-  padding: 1.5rem 0;
+  padding: 1.3rem 0;
   line-height: 130%;
-`
 
-export const ContentDetails = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @media screen and (max-width: 768px) {
+    padding: 1rem 0;
+  }
 `
 
 export const ContentDate = styled.span`
