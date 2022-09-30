@@ -3,7 +3,7 @@ date: '2022년 9월 18일 오후 2:34'
 title: 'ES6에서의 순회와 이터러블:이터레이터 프로토콜'
 menu: 'javascript'
 categories: ['JavaScript']
-summary: 'ES6에서의 이터레이터 프로토콜과 이터러블'
+summary: 'ES6에서 리스트 순회를 Array, Set, Map을 통해 알아보고, 이터레이터 프로토콜과 이터러블을 이해한다.'
 thumbnail: './thumbnail/es6 iterator protocol.png'
 ---
 ## 기존과 달라진 ES6에서의 리스트 순회
