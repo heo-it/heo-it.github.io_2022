@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[128],{6531:function(t,e,a){a.r(e);var r=a(896),s=a(5601),l=a(5208),n=a(3431);e.default=function(t){var e=t.data.allMarkdownRemark.edges,a=t.pageContext,u=a.fieldValue,i=a.totalCount;return(0,n.tZ)(r.Z,{title:u,description:i+"개의 게시글"},(0,n.tZ)(l.Z,{title:u,description:i+"개의 게시글"}),(0,n.tZ)(s.Z,{posts:e}))}}}]);
+//# sourceMappingURL=component---src-templates-category-template-tsx-bd748cb83dcc2f1fce4c.js.map

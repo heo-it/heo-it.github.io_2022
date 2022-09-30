@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[410],{658:function(t,e,a){a.r(e);var r=a(896),s=a(5601),l=a(5208),n=a(3431);e.default=function(t){var e=t.data.allMarkdownRemark.edges;return(0,n.tZ)(r.Z,{title:"blog",description:e.length+"개의 게시글"},(0,n.tZ)(l.Z,{title:"blog",description:e.length+"개의 게시글"}),(0,n.tZ)(s.Z,{posts:e}))}}}]);
+//# sourceMappingURL=component---src-pages-blog-tsx-4805416d0dcea334cf20.js.map
