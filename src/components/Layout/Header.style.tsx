@@ -51,8 +51,8 @@ export const StyledNavListItem = styled(Link)`
   justify-content: center;
   align-items: center;
   border-radius: 2rem;
-  height: 3.5rem;
   width: 3rem;
+  height: 3.5rem;
   margin: 0 0 0 var(--size-400);
 
   svg {
