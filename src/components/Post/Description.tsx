@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react'
 import {
   ContentTitle,
-  ContentDetails,
   ContentDate,
+  DescriptionWrappper,
 } from './Description.style'
 import CategoryList from 'components/Category/CategoryList'
 
@@ -18,11 +18,11 @@ const Description: FunctionComponent<DescriptionProps> = function ({
 }) {
   return (
     <>
-      <ContentTitle>{title}</ContentTitle>
-      <ContentDetails>
-        <ContentDate>{date} &middot; {timeToRead} min read</ContentDate>
+      <DescriptionWrappper>
         <CategoryList categories={categories} />
-      </ContentDetails>
+        <ContentTitle>{title}</ContentTitle>
+        <ContentDate>{date} &middot; {timeToRead} min read</ContentDate>
+      </DescriptionWrappper>
       <hr />
     </>
   )

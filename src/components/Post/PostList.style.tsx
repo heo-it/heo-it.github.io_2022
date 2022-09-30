@@ -7,8 +7,9 @@ export const PostListWrapper = styled.ul`
   justify-items: center;
   grid-gap: var(--size-600);
 
-  @media (max-width: 60rem) {
-    grid-template-columns: 1fr;
+  @media (max-width: 768px) {
     width: 100%;
+    grid-template-columns: 1fr;
+    grid-gap: 0.1rem;
   }
 `

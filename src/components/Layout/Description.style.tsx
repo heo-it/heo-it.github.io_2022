@@ -19,6 +19,15 @@ const DescriptionWrapper = styled.div`
     padding: 0.1rem;
     color: #6a7280;
   }
+
+  @media (max-width: 768px) {
+    margin-top: var(--size-600);
+    margin-bottom: var(--size-500);
+
+    > h1 {
+      font-size: var(--size-700);
+    }
+  }
 `
 
 export default DescriptionWrapper

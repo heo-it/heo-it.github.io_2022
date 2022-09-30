@@ -18,13 +18,13 @@ const Layout: FunctionComponent<LayoutProp> = function ({ title, description, ch
     <Fragment>
       <SEO title={title} description={description} />
       <Global styles={GlobalStyle} />
-      <Header title="Heo-It"/>
-      <main>
-        <LayoutWrapper>
-          <Container>{children}</Container>
-        </LayoutWrapper>
-      </main>
-      <Footer />
+        <Header title="Heo-It"/>
+        <main>
+          <LayoutWrapper>
+            <Container>{children}</Container>
+          </LayoutWrapper>
+        </main>
+        <Footer />
     </Fragment>
   )
 }
