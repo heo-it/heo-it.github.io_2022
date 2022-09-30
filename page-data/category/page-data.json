@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-category-tsx",
     "path": "/category/",
-    "result": {"data":{"allMarkdownRemark":{"group":[{"fieldValue":"ES6+","totalCount":1},{"fieldValue":"HTML","totalCount":1},{"fieldValue":"JavaScript","totalCount":10},{"fieldValue":"React","totalCount":2},{"fieldValue":"devOpts","totalCount":1}]}},"pageContext":{}},
+    "result": {"data":{"allMarkdownRemark":{"group":[{"fieldValue":"ES6+","totalCount":1},{"fieldValue":"HTML","totalCount":1},{"fieldValue":"JavaScript","totalCount":11},{"fieldValue":"React","totalCount":2},{"fieldValue":"devOpts","totalCount":1}]}},"pageContext":{}},
     "staticQueryHashes": ["3764592887"]}

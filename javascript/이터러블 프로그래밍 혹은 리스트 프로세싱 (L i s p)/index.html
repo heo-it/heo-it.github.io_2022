@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta data-react-helmet="true" property="og:site_name" content="Heo-It DevLog"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:image" content="https://heo-it.github.io/"/><meta data-react-helmet="true" property="og:description" content="개발하면서 공부한 내용을 기록하는 블로그 입니다."/><meta data-react-helmet="true" property="og:title" content="이터러블 프로그래밍 혹은 리스트 프로세싱 (L i s p)"/><meta data-react-helmet="true" name="author" content="허예진"/><meta data-react-helmet="true" name="keywords" content="HTML, CSS, JavaScript, TypeScript, React, Next.js, Gatsby, GitHub, FrontEnd"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" name="description" content="개발하면서 공부한 내용을 기록하는 블로그 입니다."/><meta data-react-helmet="true" name="title" content="이터러블 프로그래밍 혹은 리스트 프로세싱 (L i s p)"/><meta name="generator" content="Gatsby 4.12.1"/><title data-react-helmet="true">이터러블 프로그래밍 혹은 리스트 프로세싱 (L i s p)</title><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="canonical" href="null//null%3Chttps://github.com/heo-it%3E/javascript/이터러블%20프로그래밍%20혹은%20리스트%20프로세싱%20(L%20i%20s%20p)/"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><link rel="icon" href="/favicon-32x32.png?v=94f82735f366fc1ab53d0c9419bc400d" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=94f82735f366fc1ab53d0c9419bc400d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=94f82735f366fc1ab53d0c9419bc400d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=94f82735f366fc1ab53d0c9419bc400d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=94f82735f366fc1ab53d0c9419bc400d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=94f82735f366fc1ab53d0c9419bc400d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=94f82735f366fc1ab53d0c9419bc400d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=94f82735f366fc1ab53d0c9419bc400d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=94f82735f366fc1ab53d0c9419bc400d"/><link rel="canonical" href="https://heo-it.github.io/javascript/이터러블%20프로그래밍%20혹은%20리스트%20프로세싱%20(L%20i%20s%20p)/" data-baseprotocol="https:" data-basehost="heo-it.github.io"/><link as="script" rel="preload" href="/webpack-runtime-0d2d741ce79c98393767.js"/><link as="script" rel="preload" href="/framework-c4c052d1b2b22de01269.js"/><link as="script" rel="preload" href="/app-928f188f0af84ecf0556.js"/><link as="script" rel="preload" href="/1a48c3c1-3a94bcd769c287f33b43.js"/><link as="script" rel="preload" href="/commons-0b05232e529dbf2f505f.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-tsx-c29ca12f785ba9fb6a0e.js"/><link as="fetch" rel="preload" href="/page-data/javascript/이터러블 프로그래밍 혹은 리스트 프로세싱 (L i s p)/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3764592887.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css-global 17y3onw">body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0;}ul[role='list'],ol[role='list']{list-style:none;}html{height:-webkit-fill-available;}body{min-height:100vh;min-height:-webkit-fill-available;text-rendering:optimizeSpeed;line-height:1.5;}a:not([class]){text-decoration-skip-ink:auto;}img,picture{max-width:100%;display:block;}input,button,textarea,select{font:inherit;}*,*::before,*::after{box-sizing:border-box;border:0 solid #e5e7eb;}@media (prefers-reduced-motion: reduce){html:focus-within{scroll-behavior:auto;}*,*::before,*::after{-webkit-animation-duration:0.01ms!important;animation-duration:0.01ms!important;-webkit-animation-iteration-count:1!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important;}}html{width:100vw;overflow-x:hidden;}body::-webkit-scrollbar-thumb{background-color:rgba(55, 41, 44, .4);}body::-webkit-scrollbar-track{background:transparent;}:root{scroll-behavior:smooth;--size-300:0.75rem;--size-350:0.9rem;--size-400:1rem;--size-500:1.25rem;--size-550:1.5rem;--size-600:1.77rem;--size-700:2.36rem;--size-800:3.15rem;--size-900:4.2rem;}body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,system-ui,Roboto,'Helvetica Neue','Segoe UI','Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic','Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',sans-serif;color:#37292C;background-attachment:fixed;}h1,h2,h3,h4{line-height:1.125;}h1,h2,h3{font-weight:600;}h1{font-size:var(--size-700);}h2{font-size:var(--size-600);}h3{font-size:var(--size-500);}p{font-size:var(--size-400);}@media screen and (max-width: 768px){h1{font-size:var(--size-600);}h2{font-size:var(--size-500);}h3{font-size:var(--size-400);}p{font-size:var(--size-300);}}hr{width:100%;margin:var(--size-350) 0;border:0.05rem solid rgba(241, 240, 233, 0.5);}::selection{background:#d4e5eb;}p,li{max-width:none;}a{-webkit-text-decoration:none;text-decoration:none;color:inherit;}</style><style data-emotion="css 1qgncmt">.css-1qgncmt{position:fixed;width:100%;padding-top:0.6rem;z-index:1000;box-shadow:0 1px 2px rgb(0 0 0 / 10%);background-color:#fff;}</style><header class="css-1qgncmt e11ue4my4"><style data-emotion="css 1ec6fo7">.css-1ec6fo7{width:55rem;margin-left:auto;margin-right:auto;max-width:80rem;padding-left:var(--size-700);padding-right:var(--size-700);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:55rem;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;}@media (max-width: 768px){.css-1ec6fo7{width:100%;padding:0 0.5rem 0;}}@media (max-width: 768px){.css-1ec6fo7{width:95%;padding-left:0.7rem;padding-right:0.7rem;}}</style><div class="css-1ec6fo7 e11ue4my3"><style data-emotion="css t2et6i">.css-t2et6i a{text-transform:uppercase;-webkit-text-decoration:none;text-decoration:none;color:#a9cbd7;}@media (max-width: 768px){.css-t2et6i h2{font-size:var(--size-600);}}</style><div class="css-t2et6i e11ue4my2"><a href="/"><h2># <!-- -->Heo-It</h2></a></div><style data-emotion="css f51pjt">.css-f51pjt{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;position:static;background:transparent;-webkit-backdrop-filter:unset;backdrop-filter:unset;}</style><nav class="css-f51pjt e11ue4my1"><style data-emotion="css cs7e6i">.css-cs7e6i{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border-radius:2rem;width:3rem;height:3.5rem;margin:0 0 0 var(--size-400);}.css-cs7e6i svg{width:1.5rem;height:1.5rem;fill:#9cbeca;}@media (max-width: 768px){.css-cs7e6i{-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;width:2.5rem;}.css-cs7e6i svg{width:1.2rem;height:1.2rem;}}</style><a class="css-cs7e6i e11ue4my0" href="/blog"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm11 4h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1zm-1 6h-4v-4h4v4zM17 3c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2zM7 13c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"></path></svg></a><a class="css-cs7e6i e11ue4my0" href="/category"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M11.707 2.293A.997.997 0 0 0 11 2H6a.997.997 0 0 0-.707.293l-3 3A.996.996 0 0 0 2 6v5c0 .266.105.52.293.707l10 10a.997.997 0 0 0 1.414 0l8-8a.999.999 0 0 0 0-1.414l-10-10zM13 19.586l-9-9V6.414L6.414 4h4.172l9 9L13 19.586z"></path><circle cx="8.353" cy="8.353" r="1.647"></circle></svg></a></nav></div></header><main><style data-emotion="css x98vrg">.css-x98vrg{min-height:100vh;padding:5rem 0 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}.css-x98vrg main{margin-top:auto;margin-bottom:auto;}.css-x98vrg footer{margin-top:auto;}@media (max-width: 768px){.css-x98vrg{padding:4rem 5px 0 5px;}}</style><div class="css-x98vrg eim60ru0"><style data-emotion="css b0o3ux">.css-b0o3ux{width:55rem;margin-left:auto;margin-right:auto;max-width:80rem;padding-left:var(--size-700);padding-right:var(--size-700);}@media (max-width: 768px){.css-b0o3ux{width:100%;padding:0 0.5rem 0;}}</style><div class="css-b0o3ux e1cfpfqa0"><style data-emotion="css 1xwjkvh">.css-1xwjkvh{width:100%;height:100%;border-radius:8px;margin-top:0.5rem;}</style><div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained css-1xwjkvh ed67y5u0"><div style="max-width:730px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;382&#x27; width=&#x27;730&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAy0lEQVQoz62SaQrCMBCFc/9TuItL7ZK6tHZxQRQUvEbTJC4neJJgodaIuPx4TGaYfPMmhLisiX+KmIpO1jCeX/V8BCxyE8BUI+8go6ymo8dasLP6WzgpJ0WzukhZB4fLGptTiP1lid05wUpOcbxusZBjPajqXsUHh8qFz7qgrI1p3kcsXMy5jUi4CPkIAR9q2IwPdI+n1Xp2qKRcTfIeUkGxkL6GhdxCIihi4SHgFiLh6JhKiuReU0PKT2Bc+RsZV/7l/z2t/C2ger4B4lmKJs2wCa8AAAAASUVORK5CYII=" alt=""/><picture><source type="image/webp" data-srcset="/static/ae8e7627874d5cd51d6321a0f655e85a/80a11/iterable-programming-or-lisp.webp 183w,/static/ae8e7627874d5cd51d6321a0f655e85a/2e3bd/iterable-programming-or-lisp.webp 365w,/static/ae8e7627874d5cd51d6321a0f655e85a/e25d7/iterable-programming-or-lisp.webp 730w,/static/ae8e7627874d5cd51d6321a0f655e85a/49049/iterable-programming-or-lisp.webp 1460w" sizes="(min-width: 730px) 730px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 730px) 730px, 100vw" decoding="async" loading="lazy" data-src="/static/ae8e7627874d5cd51d6321a0f655e85a/fdc73/iterable-programming-or-lisp.png" data-srcset="/static/ae8e7627874d5cd51d6321a0f655e85a/3d9cb/iterable-programming-or-lisp.png 183w,/static/ae8e7627874d5cd51d6321a0f655e85a/e9c2e/iterable-programming-or-lisp.png 365w,/static/ae8e7627874d5cd51d6321a0f655e85a/fdc73/iterable-programming-or-lisp.png 730w,/static/ae8e7627874d5cd51d6321a0f655e85a/f1fe2/iterable-programming-or-lisp.png 1460w" alt="Post Image"/></picture><noscript><picture><source type="image/webp" srcSet="/static/ae8e7627874d5cd51d6321a0f655e85a/80a11/iterable-programming-or-lisp.webp 183w,/static/ae8e7627874d5cd51d6321a0f655e85a/2e3bd/iterable-programming-or-lisp.webp 365w,/static/ae8e7627874d5cd51d6321a0f655e85a/e25d7/iterable-programming-or-lisp.webp 730w,/static/ae8e7627874d5cd51d6321a0f655e85a/49049/iterable-programming-or-lisp.webp 1460w" sizes="(min-width: 730px) 730px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 730px) 730px, 100vw" decoding="async" loading="lazy" src="/static/ae8e7627874d5cd51d6321a0f655e85a/fdc73/iterable-programming-or-lisp.png" srcSet="/static/ae8e7627874d5cd51d6321a0f655e85a/3d9cb/iterable-programming-or-lisp.png 183w,/static/ae8e7627874d5cd51d6321a0f655e85a/e9c2e/iterable-programming-or-lisp.png 365w,/static/ae8e7627874d5cd51d6321a0f655e85a/fdc73/iterable-programming-or-lisp.png 730w,/static/ae8e7627874d5cd51d6321a0f655e85a/f1fe2/iterable-programming-or-lisp.png 1460w" alt="Post Image"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><style data-emotion="css kdnbnl">.css-kdnbnl{padding:1rem 0.5rem 0;}</style><div class="css-kdnbnl e1i9dxx12"><div><style data-emotion="css 1jv0gtx">.css-1jv0gtx{margin-right:0.6rem;margin-bottom:0.6rem;text-transform:uppercase;font-size:var(--size-300);}.css-1jv0gtx a{position:relative;background-color:#c6dce4;padding:0.2rem 0.5rem;}.css-1jv0gtx a:hover{background-color:rgba(237, 85, 110, 0.7);color:rgba(255, 255, 255, 1);}</style><span class="css-1jv0gtx e1i7k2m50"><a href="/category/JavaScript">JavaScript</a></span></div><style data-emotion="css 1p1h6q">.css-1p1h6q{word-break:keep-all;padding:1.3rem 0;line-height:130%;font-size:2.1rem;}@media screen and (max-width: 768px){.css-1p1h6q{padding:1rem 0;}}</style><h1 class="css-1p1h6q e1i9dxx11">이터러블 프로그래밍 혹은 리스트 프로세싱 (L i s p)</h1><style data-emotion="css vgcyam">.css-vgcyam{font-size:var(--size-350);color:rgba(98, 92, 96, 0.7);}</style><span class="css-vgcyam e1i9dxx10">2022년 9월 22일 오후 1:59<!-- --> · <!-- -->4<!-- --> min read</span></div><hr/><style data-emotion="css 1qu4lce">.css-1qu4lce{margin:0 auto;padding:1rem 0;word-wrap:break-word;}.css-1qu4lce h1,.css-1qu4lce h2,.css-1qu4lce h3{letter-spacing:-0.01em;line-height:1.2;font-weight:600;margin-bottom:0;}.css-1qu4lce h1{font-size:var(--size-700);}.css-1qu4lce h2{font-size:var(--size-600);}.css-1qu4lce h3{font-size:var(--size-550);}@media screen and (max-width: 768px){.css-1qu4lce h1{font-size:var(--size-600);}.css-1qu4lce h2{font-size:var(--size-550);}.css-1qu4lce h3{font-size:var(--size-500);}}.css-1qu4lce *+h1{margin-top:var(--size-900);}.css-1qu4lce *+h2{margin-top:var(--size-800);}.css-1qu4lce *+h3{margin-top:var(--size-700);}.css-1qu4lce p{font-size:var(--size-400);margin-top:0.5em;margin-bottom:0.5em;}.css-1qu4lce ol,.css-1qu4lce ul{margin:0;margin-block-start:0.6em;margin-block-end:0.6em;}.css-1qu4lce ol p,.css-1qu4lce ul p{margin:0.5rem 0;}.css-1qu4lce ol li,.css-1qu4lce ul li{margin-block-start:0.6em;margin-block-end:0.6em;}.css-1qu4lce ul{list-style-type:disc;}.css-1qu4lce ul ul{list-style-type:circle;}.css-1qu4lce ul ul ul{list-style-type:square;}.css-1qu4lce ol{list-style-type:decimal;}.css-1qu4lce hr{margin:2rem 0;}.css-1qu4lce a{font-weight:700;}.css-1qu4lce a:active,.css-1qu4lce a:hover{outline-width:0;}.css-1qu4lce strong{font-weight:700;}.css-1qu4lce img{width:100%;border-style:none;border-radius:var(--size-400);}.css-1qu4lce em{font-style:italic;display:block;color:rgba(120, 119, 116, 1);fill:rgba(120, 119, 116, 1);margin-top:0.5rem;margin-bottom:0.5rem;}.css-1qu4lce table{display:table;border-collapse:collapse;margin:var(--size-400) 0;}.css-1qu4lce thead{display:table-header-group;font-weight:700;}.css-1qu4lce tr{display:table-row;}.css-1qu4lce th,.css-1qu4lce td{display:table-cell;padding:var(--size-400);}.css-1qu4lce blockquote{margin:1em 0;padding-left:1em;border-left:3px solid rgb(55, 53, 47);}.css-1qu4lce blockquote p{margin:0.5rem 0;}.css-1qu4lce code{margin:0px 0.2rem 0px 0px;padding:0.1rem 0.2rem;border-radius:0.3rem;background:rgb(237, 237, 235);font-size:95%;font-family:'Poppins',-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,Ubuntu,roboto,noto,segoe ui,arial,sans-serif;color:rgb(218, 97, 91);}.css-1qu4lce mark{background-color:rgba(250, 243, 221);padding:0.1rem;}@media screen and (max-width: 768px){.css-1qu4lce{width:100%;padding:1.5rem 0;}}</style><div class="css-1qu4lce ezea5fa0"><p>함수형 프로그래밍은 리습 프로그래밍, 이터러블 프로그래밍이라고도 불린다.</p>
+<p>여기서는 <a href="https://github.com/marpple/FxJS" target="_blank" rel="nofollow">FxJS</a> 를 import하여  <code>_, L, C</code> 등의 함수로 함수형 프로그래밍을 해본다.</p>
+<p>예제를 통해 함수형으로 프로그래밍을 알아보자.</p>
+<h2>홀수 n개 더하기</h2>
+<ul>
+<li>홀수 n개의 제곱의 합을 구하는 함수를 구현해보자.</li>
+</ul>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">function f1(limit, list) {
+	let acc = 0;
+	for (a of list) {
+		if (a % 2) {
+			const b = a * a;
+			acc += b;
+		}
+		if (--limit == 0) break;
+	}
+}
+
+f1(3, [1 ,2 ,3, 4, 5, 6, 7, 8, 9, 10]);</code>
+        </deckgo-highlight-code>
+<h2>if를 filter로</h2>
+<p>if문으로 순회하는 로직은 filter로 추상화 할 수 있다.</p>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">function f1(limit, list) {
+	let acc = 0;
+	for (const a of L.filter(a =&gt; a % 2, list)) {
+		const b = a * a;
+		acc += b;
+		if (--limit == 0) break;
+	}
+}
+
+f1(3, [1 ,2 ,3, 4, 5, 6, 7, 8, 9, 10]);</code>
+        </deckgo-highlight-code>
+<ul>
+<li>for문이 실행되는 횟수가 줄어들기 때문에 성능적인 이점도 가질 수 있다.</li>
+</ul>
+<h2>값 변화 후 변수 할당을 map으로</h2>
+<p>map을 활용하여 순회하는 배열의 값을 변경하고 a에 변수를 할당한다.</p>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">function f1(limit, list) {
+	let acc = 0;
+	for (const a of L.map(a =&gt; a * a, L.filter(a =&gt; a % 2, list))) {
+		// const b = a * a;
+		acc += a;
+		if (--limit == 0) break;
+	}
+}
+
+f1(3, [1 ,2 ,3, 4, 5, 6, 7, 8, 9, 10]);</code>
+        </deckgo-highlight-code>
+<h2>break를 take로</h2>
+<p>take를 활용하여 break 대신 순회 횟수를 제한할 수 있다.</p>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">function f1(limit, list) {
+	let acc = 0;
+	for (const a of L.take(limit, L.map(a =&gt; a * a, L.filter(a =&gt; a % 2, list)))) {
+		acc += a;
+		// if (--limit == 0) break;
+	}
+}
+
+f1(3, [1 ,2 ,3, 4, 5, 6, 7, 8, 9, 10]);</code>
+        </deckgo-highlight-code>
+<p>‼️ 간단한 로직이었지만 이전에 구현해 놨던 L.map, L.filter, L.take 함수를 이용하여 모두 모듈화 가능했다. 명령형으로 작성된 코드를 함수형으로 구현할 수 있다.</p>
+<h2>축약 및 합산을 reduce로</h2>
+<ul>
+<li>주어진 배열에서 홀수 3개를 제곱한 총합을 반환는 예제이다.</li>
+</ul>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">const add = (a, b) =&gt; a + b;
+
+function f2(limit, list) {
+	console.log(
+		_.reduce(add,
+			L.take(limit,
+				L.map(a =&gt; a * a, 
+					L.filter(a =&gt; a % 2, list)))));
+}
+
+f1(3, [1 ,2 ,3, 4, 5, 6, 7, 8, 9, 10]);</code>
+        </deckgo-highlight-code>
+<p><code>go</code> 함수를 활용해서 조금 더 직관적으로 읽기 편하도록 구현할 수 있다.</p>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">function f2(limit, list) {
+	_.go(list,
+		L.filter(a =&gt; a % 2),
+		L.map(a =&gt; a * a),
+		L.take(limit),
+		_.reduce(add),
+		console.log
+	);
+}</code>
+        </deckgo-highlight-code>
+<h2>while을 range로</h2>
+<p>어떤 구간을 얼만큼 반복하고 싶을 때 사용하는 while 이터러블 프로그래밍 관점에서는 range 함수라고 볼 수 있다.</p>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">function f3(end) {
+	let i = 1;
+	while (i &lt; end) {
+		console.log(i);
+		i += 2;
+	}
+}
+
+f3(10);</code>
+        </deckgo-highlight-code>
+<p>range만큼 어떤 행위들을 할 것이다. 라고 명시한다고 생각하면됨.</p>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">function f3(end) {
+	_.each(console.log, L.range(1, end, 2));   // range(start, stop, step)
+}</code>
+        </deckgo-highlight-code>
+<h2>효과를 each로 구분</h2>
+<p>each라는 함수를 사용하면 함수 내부에는 반드시 부수적인 효과, 이펙트가 있다는 것을 표현한다.</p>
+<p>each함수 호출 이후에도 리턴하는 배열이 동일하기 때문에 순회하면서 배열 요소를 변경해준다는 것을 의미.ㅎ</p>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">function f4(end) {
+	_.go(
+		L.range(1, end, 2),
+		_.each(console.log)
+	)
+}</code>
+        </deckgo-highlight-code>
+<h2>예제 - 1</h2>
+<h3>추억의 별 그리기</h3>
+<ul>
+<li>출력 결과</li>
+</ul>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="one-dark"  >
+          <code slot="code">*
+**
+***
+****
+*****</code>
+        </deckgo-highlight-code>
+<ul>
+<li>먼저 range함수로 1 ~ 5 값을 가진 1차원 배열을 만든다.</li>
+</ul>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">_.go(
+	L.range(1, 6),
+	console.log
+);</code>
+        </deckgo-highlight-code>
+<ul>
+<li>map을 순회하면서 range 길이만큼 배열로 리턴해준다.</li>
+<li>range는 인자의 길이만큼 숫자를 배열로 생성해서 리턴해주는 함수이다.</li>
+</ul>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">_.go(
+	L.range(1, 6),
+	L.map(L.range),
+	console.log
+);</code>
+        </deckgo-highlight-code>
+<ul>
+<li>숫자로 구성된 요소들을 <code>*</code> 문자로 변경해준다.</li>
+</ul>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">_.go(
+	L.range(1, 6),
+	L.map(L.range),
+	L.map(L.map(_ =&gt; &#39;*&#39;)),
+	console.log
+);</code>
+        </deckgo-highlight-code>
+<ul>
+<li>내부 배열들의 <code>*</code>  문자를 reduce를 이용해서 하나의 문자로 합쳐준다.</li>
+</ul>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">_.go(
+	L.range(1, 6),
+	L.map(L.range),
+	L.map(L.map(_ =&gt; &#39;*&#39;)),
+	L.map(_.reduce((a, b) =&gt; `${a}${b}`)),
+	console.log
+);</code>
+        </deckgo-highlight-code>
+<ul>
+<li>배열을 줄바꿈 문자(<code>\n</code>) 기준으로 reduce를 이용해 한번 더 합쳐준다.</li>
+</ul>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">_.go(
+	L.range(1, 6),
+  L.map(L.range),
+  L.map(L.map(_ =&gt; &#39;*&#39;)),
+  L.map(_.reduce((a, b) =&gt; `${a}${b}`)),
+  _.reduce((a, b) =&gt; `${a}\n${b}`),
+  console.log
+);</code>
+        </deckgo-highlight-code>
+<ul>
+<li>코드를 더 읽기 쉽게 리팩토링 해보면 아래와 로직이 완성된다.</li>
+</ul>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">const join = sep =&gt; _.reduce((a, b) =&gt; `${a}${sel}${b}`);
+
+_.go(
+	L.range(1, 6),
+	L.map(L.range),
+	L.map(L.map(_ =&gt; &#39;*&#39;)),
+	L.map(join(a, b)),
+	L.map(join(a, b, &#39;\n&#39;)),
+	console.log
+);</code>
+        </deckgo-highlight-code>
+<h2>예제 - 2</h2>
+<h3>추억의 구구단</h3>
+<ul>
+<li>출력 결과</li>
+</ul>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+2 x 4 = 8
+2 x 5 = 10
+2 x 6 = 12
+2 x 7 = 14
+2 x 8 = 16
+2 x 9 = 18
+
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+...</code>
+        </deckgo-highlight-code>
+<ul>
+<li>먼저 2 ~ 9 값을 가진 배열을 생성한다.</li>
+</ul>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">_.go(
+	L.range(2, 10),
+	console.log
+);</code>
+        </deckgo-highlight-code>
+<ul>
+<li>map을 순회하면서 1 ~ 9 범위를 가진 내부 배열을 생성한다.</li>
+</ul>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">_.go(
+	L.range(2, 10),
+	L.map(a =&gt; _.go(
+		L.range(1, 10)
+	)),
+	console.log
+);</code>
+        </deckgo-highlight-code>
+<ul>
+<li>a와 i 값을 이용해 구구단 형식으로 출력해준다.</li>
+</ul>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">_.go(
+	L.range(2, 10),
+	L.map(a =&gt; _.go(
+		L.range(1, 10),
+		L.map(i =&gt; `${a} x ${i} = ${a * i}`),
+	)),
+	console.log
+);</code>
+        </deckgo-highlight-code>
+<ul>
+<li>내부 배열을 위에서 구현한 <code>join</code> 함수를 이용하여 <code>\n</code> 기준으로 합쳐준다.</li>
+</ul>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">_.go(
+	L.range(2, 10),
+	L.map(a =&gt; _.go(
+		L.range(1, 10),
+		L.map(i =&gt; `${a} x ${i} = ${a * i}`),
+		join(&#39;\n&#39;)
+	)),
+	console.log
+);</code>
+        </deckgo-highlight-code>
+<ul>
+<li>전체 배열을 <code>\n\n</code> 기준으로 합쳐준다.</li>
+</ul>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="one-dark"  >
+          <code slot="code">_.go(
+	L.range(2, 10),
+  L.map(a =&gt; _.go(
+	  L.range(1, 10),
+	  L.map(i =&gt; `${a} x ${i} = ${a * i}`),
+	  join(&#39;\n&#39;)
+  )),
+  join(&#39;\n\n&#39;),
+  console.log
+);</code>
+        </deckgo-highlight-code></div><hr/><div></div></div></div></main><style data-emotion="css 113gokv">.css-113gokv{padding-top:var(--size-300);padding-bottom:var(--size-300);}</style><footer class="css-113gokv e1jjnpso2"><style data-emotion="css 141d07w">.css-141d07w{width:55rem;margin-left:auto;margin-right:auto;max-width:80rem;padding-left:var(--size-700);padding-right:var(--size-700);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}@media (max-width: 768px){.css-141d07w{width:100%;padding:0 0.5rem 0;}}</style><div class="css-141d07w e1jjnpso0"><style data-emotion="css 1j5asdi">.css-1j5asdi{font-size:var(--size-300);}</style><p class="css-1j5asdi e1jjnpso1">© 2022 허예진 Powered by  <a href="https://www.gatsbyjs.com/">Gatsby</a></p></div></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/javascript/이터러블 프로그래밍 혹은 리스트 프로세싱 (L i s p)/";window.___webpackCompilationHash="266bfe05c901944e0d48";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-4718f0fec20e0d09d7f5.js"],"app":["/app-928f188f0af84ecf0556.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-afd21f2521ec69d3ce6f.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-5af04698a4b37927a10d.js"],"component---src-pages-blog-tsx":["/component---src-pages-blog-tsx-4805416d0dcea334cf20.js"],"component---src-pages-category-tsx":["/component---src-pages-category-tsx-17cd1091bd3e586192a2.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-841c3b96f9f3c2667f0c.js"],"component---src-templates-category-template-tsx":["/component---src-templates-category-template-tsx-bd748cb83dcc2f1fce4c.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-c29ca12f785ba9fb6a0e.js"]};/*]]>*/</script><script src="/polyfill-4718f0fec20e0d09d7f5.js" nomodule=""></script><script src="/component---src-templates-post-template-tsx-c29ca12f785ba9fb6a0e.js" async=""></script><script src="/commons-0b05232e529dbf2f505f.js" async=""></script><script src="/1a48c3c1-3a94bcd769c287f33b43.js" async=""></script><script src="/app-928f188f0af84ecf0556.js" async=""></script><script src="/framework-c4c052d1b2b22de01269.js" async=""></script><script src="/webpack-runtime-0d2d741ce79c98393767.js" async=""></script></body></html>
