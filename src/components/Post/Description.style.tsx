@@ -8,6 +8,7 @@ export const ContentTitle = styled.h1`
   word-break: keep-all;
   padding: 1.3rem 0;
   line-height: 130%;
+  font-size: 2.1rem;
 
   @media screen and (max-width: 768px) {
     padding: 1rem 0;
