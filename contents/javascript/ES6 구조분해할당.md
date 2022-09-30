@@ -3,7 +3,7 @@ date: '26 Jan, 2022'
 title: 'ES6 구조분해할당'
 menu: 'javascript'
 categories: ['JavaScript']
-summary: 'ES6의 구조 분해 할당 문법에 대해 정리'
+summary: 'ES6의 구조 분해 할당 문법에 대해 알아보자.'
 thumbnail: './thumbnail/es6.png'
 ---
 ## 1. 배열 분해하기
