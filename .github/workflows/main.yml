@@ -1,0 +1,11 @@
+name: public-blog
+
+on:
+  push:
+    branches: [master]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publishing Blog
+        run: npm run deploy
